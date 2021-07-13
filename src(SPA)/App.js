@@ -7,36 +7,30 @@ import Category from './Category';
 import CategoryDescription from './CategoryDescription';
 import Error from './Error';
 
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 function App() {
 
 
-	// const nav = 
-	// 	{'link': "nav1", "text": "my link",
-	// 	'link': "nav2", "text": "my link 2",
-	// 	'link': "nav3", "text": "my link 3"}
-	// ]
-
-
   return (
     <>
-	 <Header/>
 	 <Router>
+		 <Header/>
 		 <Switch>
-
+		 	 
 			 <Route exact path="/" component={Home}/>
-			 <Route exact path="/About" component={About}/>
+			 <Route path="/about" component={About}/>
 			 <Route exact path="/cat" component={Category}/>
-
-			 <Route exact path="/Cat/notebook"/>
-			 <Route exact path="/Cat/monitor"/>
-			 <Route exact path="/Cat/cellphone"/>
+			 
+			 <Route exact path="/cat/notebook"/>
+			 <Route exact path="/cat/monitor"/>
+			 <Route exact path="/cat/cellphone"/>
 
 			 <Route component={Error}/>
 
 		 </Switch>
 		 <Route  path="/Cat/:categoryName" component={CategoryDescription}/>
+		 
 	 </Router>
 	 <Footer/>
 	 </>

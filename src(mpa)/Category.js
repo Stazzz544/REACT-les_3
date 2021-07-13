@@ -1,4 +1,3 @@
-import CategoryDescription from "./CategoryDescription";
 import {useRouteMatch} from 'react-router-dom';
 
 const Category = () => {
