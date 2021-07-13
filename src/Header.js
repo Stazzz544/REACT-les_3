@@ -1,3 +1,6 @@
+
+import {BrowserRouter as Router, Link,} from 'react-router-dom';
+
 const Header = () => {
 	return(
 		<>
@@ -10,10 +13,12 @@ export default Header;
 
 const Nav = () => {
 	return(
-		<ul>
-			<li><a href="/">Главная</a></li>
-			<li><a href="/about">О сайте</a></li>
-			<li><a href="/cat">Категории</a></li>
-		</ul>
+
+			<ul>
+				<li><Link to="/">Главная</Link></li>
+				<li><Link to="/about">О сайте</Link></li>
+				<li><Link to="/cat">Категории</Link></li>
+			</ul>
+
 	)
 }

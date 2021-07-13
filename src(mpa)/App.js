@@ -12,27 +12,22 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (
     <>
-	
+	 <Header/>
 	 <Router>
-		  <Header/>
-		  
 		 <Switch>
-		 	 
+
 			 <Route exact path="/" component={Home}/>
 			 <Route exact path="/About" component={About}/>
 			 <Route exact path="/cat" component={Category}/>
-			 
-			 
+
+			 <Route  path="/Cat/:categoryName" component={CategoryDescription}/>
 			 
 			 <Route exact path="/Cat/notebook"/>
 			 <Route exact path="/Cat/monitor"/>
 			 <Route exact path="/Cat/cellphone"/>
-			 <Route  component={Error}/>
-			 
 
-			 
+			 <Route component={Error}/>
 		 </Switch>
-		 <Route  path="/Cat/:categoryName" component={CategoryDescription}/>
 	 </Router>
 	 <Footer/>
 	 </>

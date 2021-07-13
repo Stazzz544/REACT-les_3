@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 
-function CategoryDescription () {
-	let {title} = useParams();
+const CategoryDescription = () => {
+	let {categoryName} = useParams();
 	return(
 		<>
-			<h1>Category: {title}</h1>
+			<h1>Category: {categoryName}</h1>
 			<a href="/cat">Назад</a>
 		</>
-	);
+	)
 }
 
 export default CategoryDescription;
