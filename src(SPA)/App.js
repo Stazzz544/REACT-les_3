@@ -7,7 +7,7 @@ import Category from './Category';
 import CategoryDescription from './CategoryDescription';
 import Error from './Error';
 
-import {BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
 

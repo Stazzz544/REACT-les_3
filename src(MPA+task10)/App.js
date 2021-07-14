@@ -12,22 +12,32 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
 
 
-	// const nav = 
-	// 	{'link': "nav1", "text": "my link",
-	// 	'link': "nav2", "text": "my link 2",
-	// 	'link': "nav3", "text": "my link 3"}
-	// ]
+	const HeaderNavData = 
+		[
+		{'link': "/", "text": "Главная"},
+		{'link': "/about", "text": "О сайте"},
+		{'link': "/cat", "text": "Категории"},
+		]
+	
+	const CategoryNavData = 
+		[
+		{'link': "/notebook", "text": "Ноутбуки"},
+		{'link': "/monitor", "text": "Мониторы"},
+		{'link': "/cellphone", "text": "Мобильные телефоны"},
+		]
 
 
   return (
     <>
-	 <Header/>
+	 <Header linkData = {HeaderNavData}/>
 	 <Router>
 		 <Switch>
 
 			 <Route exact path="/" component={Home}/>
 			 <Route exact path="/About" component={About}/>
-			 <Route exact path="/cat" component={Category}/>
+
+			 {/* <Route exact path="/cat"  component={Category} /> */}
+			 <Route render={(props)=><Category linkData={CategoryNavData}{...props}/>} exact path="/cat"/>
 
 			 <Route exact path="/Cat/notebook"/>
 			 <Route exact path="/Cat/monitor"/>

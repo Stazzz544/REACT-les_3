@@ -1,6 +1,4 @@
-import CategoryDescription from "./CategoryDescription";
-
-import {BrowserRouter as Router, Link, useRouteMatch} from 'react-router-dom';
+import {Link, useRouteMatch} from 'react-router-dom';
 
 const Category = () => {
 	let match = useRouteMatch();
